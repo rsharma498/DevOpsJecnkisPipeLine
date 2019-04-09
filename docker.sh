@@ -1,3 +1,4 @@
+#!/bin/bash
 rm -rf docker-jenkins-build
 mkdir docker-jenkins-build
 cd docker-jenkins-build
@@ -9,5 +10,5 @@ COPY addressbook.war /usr/local/tomcat/webapps/myapp.war
 CMD "catalina.sh" "run"
 EXPOSE 8080 
 EOT
-/usr/bin/docker build -t kubedemon/deploy_image:$BUILD_NUMBER .
-/usr/bin/docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8080:8080 kubedemon/deploy_image:$BUILD_NUMBER
+docker build -t kubedemon/deploy_image:$BUILD_NUMBER .
+docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8080:8080 kubedemon/deploy_image:$BUILD_NUMBER
