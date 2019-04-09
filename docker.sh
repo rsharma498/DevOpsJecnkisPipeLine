@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 rm -rf docker-jenkins-build
 mkdir docker-jenkins-build
 cd docker-jenkins-build
