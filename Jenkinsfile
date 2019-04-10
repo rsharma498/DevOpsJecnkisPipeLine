@@ -1,4 +1,7 @@
 pipeline {
+    environment {
+        PATH = "$PATH:/usr/bin"
+    }
     agent {
         docker {
             image 'maven:3-alpine'
