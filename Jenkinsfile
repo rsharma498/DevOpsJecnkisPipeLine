@@ -1,7 +1,5 @@
 pipeline {
-    environment {
-        PATH = "$PATH:/usr/bin"
-    }
+    
     agent {
         docker {
             image 'maven:3-alpine'
@@ -25,8 +23,8 @@ pipeline {
             }
         }
         stage('Deliver') {
-               dockerfile {
-                     filename "Dockerfile"
+               steps {
+                     sh 'docker.sh'
             }
         }
     }
