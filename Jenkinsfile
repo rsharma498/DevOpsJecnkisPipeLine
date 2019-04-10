@@ -25,8 +25,8 @@ pipeline {
             }
         }
         stage('Deliver') {
-            steps {
-                sh 'docker build -t mymage .'
+               dockerfile {
+                     filename "Dockerfile"
             }
         }
     }
