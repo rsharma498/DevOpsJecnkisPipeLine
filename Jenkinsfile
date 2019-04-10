@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './docker.sh'
+                sh 'docker build -t mymage .'
             }
         }
     }
