@@ -22,11 +22,6 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
-               steps {
-                     sh './docker.sh'
-                   
-            }
-        }
+        
     }
-}
+
