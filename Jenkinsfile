@@ -25,8 +25,8 @@ pipeline {
         stage('Deliver') {
                steps {
                      sh './docker.sh'
-                   sh 'docker build -t kubedemon/deploy_image:$BUILD_NUMBER .'
-                   sh 'docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8080:8080 kubedemon/deploy_image:$BUILD_NUMBER'
+                   sh 'sudo docker build -t kubedemon/deploy_image:$BUILD_NUMBER .'
+                   sh 'sudo docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8080:8080 kubedemon/deploy_image:$BUILD_NUMBER'
             }
         }
     }
