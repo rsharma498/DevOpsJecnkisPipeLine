@@ -10,5 +10,4 @@ COPY addressbook.war /usr/local/tomcat/webapps/myapp.war
 CMD "catalina.sh" "run"
 EXPOSE 8080 
 EOT
-docker --privileged build -t kubedemon12 .
-docker --privileged run -itd --name testcontainer -p 8080:8080 kubedemon12
+docker build -t kubedemon12 .
