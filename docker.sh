@@ -10,4 +10,6 @@ COPY addressbook.war /usr/local/tomcat/webapps/myapp.war
 CMD "catalina.sh" "run"
 EXPOSE 8080 
 EOT
-docker build -t kubedemon12 .
+docker build -t kubedemon/deploy_image:$BUILD_NUMBER .
+docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8080:8080 kubedemon/deploy_image:$BUILD_NUMBER
+  
