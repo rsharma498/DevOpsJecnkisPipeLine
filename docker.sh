@@ -11,5 +11,5 @@ CMD "catalina.sh" "run"
 EXPOSE 8080 
 EOT
 docker build -t kubemahi/deploy_image:$BUILD_NUMBER .
-docker run -itd --name=mycontainer-$BUILD_NUMBER -p 8083:8080 kubemahi/deploy_image:$BUILD_NUMBER
+docker run -itd --name=mycontainer-$BUILD_NUMBER -P kubemahi/deploy_image:$BUILD_NUMBER
   
