@@ -2,7 +2,7 @@
 rm -rf docker-jenkins-build
 mkdir docker-jenkins-build
 cd docker-jenkins-build
-cp /var/lib/jenkins/workspace/new-dev-ops-test/target/addressbook.war .
+cp /var/lib/jenkins/workspace/addressbook-project/target/addressbook.war .
 touch Dockerfile
 cat <<EOT>>Dockerfile
 From tomcat
