@@ -6,7 +6,7 @@ cp /var/lib/jenkins/workspace/addressbook-project/target/addressbook.war .
 touch Dockerfile
 cat <<EOT>>Dockerfile
 From tomcat
-COPY addressbook.war /usr/local/tomcat/webapps/myapp.war
+COPY addressbook.war /usr/local/tomcat/webapps/addressbook.war
 CMD "catalina.sh" "run"
 EXPOSE 8080 
 EOT
