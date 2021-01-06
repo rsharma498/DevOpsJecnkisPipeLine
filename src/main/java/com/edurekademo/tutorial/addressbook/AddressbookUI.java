@@ -145,5 +145,6 @@ public class AddressbookUI extends UI {
     @VaadinServletConfiguration(ui = AddressbookUI.class, productionMode = false)
     public static class MyUIServlet extends VaadinServlet {
     }
-
+class Hello{​​public static void main(String arg[]){​​System.out.println("Hello word");}​​}​​
 }
+
